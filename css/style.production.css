@@ -15,14 +15,26 @@ Link Color (Blue): #0b5394;
 Link Visited (Purple): #6a329f;
 Link Active (Red): #f44336;
  */ 
+
+:root {
+  --lightblue: #cfe2f3;
+  --textblack: #2b2b2b;
+  --linkcolor: #0b5394;
+  --linkvisited: #6a329f;
+  --linkactive: #f44336;
+  --buttonbackground: #38761d;
+  --buttontext: white;
+  --buttonborder: rgba(0, 0, 0, 0.3);
+  --gridbackground: lightgrey;
+  --headerfontweight: 700;
+} 
  
  body {
-    background-color: #cfe2f3;
+    background-color: var(--lightblue);
     font-family: 'Lato', sans-serif;
     font-weight: 400;
     font-size: 16px; /* Sets the font size to 16px */
-    -webkit-text-decoration: #2b2b2b;
-            text-decoration: #2b2b2b;
+    text-decoration: var(--textblack);
     line-height: 1.6; /* Sets the line-height to 1.6 */
   }
   
@@ -42,15 +54,15 @@ Link Active (Red): #f44336;
   }
   
   a {
-    color: #0b5394;
+    color: var(--linkcolor);
   }
   
   a:visited { /* visited link */
-    color: #6a329f;
+    color: var(--linkvisited);
   }
     
   a:active { /* selected link */
-    color: #f44336;
+    color: var(--linkactive);
   }
   
   a:hover, a:focus { /* No underlining when hovering over or focused on a link */
@@ -61,30 +73,30 @@ Link Active (Red): #f44336;
       border: none; /* overwrites browser defaults and resets the border */
       display: inline-block;
       font-family: inherit; /* takes the font from the outer container */
-      background-color: #38761d; /* styles the background color, font color, and text decoration (underline, etc.) of the button */
-      color: white;
+      background-color: var(--buttonbackground); /* styles the background color, font color, and text decoration (underline, etc.) of the button */
+      color: var(--buttontext);
       text-decoration: none;
       padding: 10px; /*adds spacing to the button (this will be discussed more in-depth later) */
       border-radius: 3px;
-      border-bottom: 2px solid rgba(0, 0, 0, 0.3); /* gives the button a bottom border with a width of 2px, a type of solid, and a color in RGBA format */
+      border-bottom: 2px solid var(--buttonborder); /* gives the button a bottom border with a width of 2px, a type of solid, and a color in RGBA format */
       -webkit-transition: opacity 0.2s;
       -o-transition: opacity 0.2s;
       transition: opacity 0.2s;
     }
   
   .button {
-      border: none; /* overwrites browser defaults and resets the border */
-      display: inline-block;
-      font-family: inherit; /* takes the font from the outer container */
-      background-color: #38761d; /* styles the background color, font color, and text decoration (underline, etc.) of the button */
-      color: white;
-      text-decoration: none;
-      padding: 10px; /*adds spacing to the button (this will be discussed more in-depth later) */
-      border-radius: 3px;
-      border-bottom: 2px solid rgba(0, 0, 0, 0.3); /* gives the button a bottom border with a width of 2px, a type of solid, and a color in RGBA format */
-      -webkit-transition: opacity 0.2s;
-      -o-transition: opacity 0.2s;
-      transition: opacity 0.2s;
+    border: none; /* overwrites browser defaults and resets the border */
+    display: inline-block;
+    font-family: inherit; /* takes the font from the outer container */
+    background-color: var(--buttonbackground); /* styles the background color, font color, and text decoration (underline, etc.) of the button */
+    color: var(--buttontext);
+    text-decoration: none;
+    padding: 10px; /*adds spacing to the button (this will be discussed more in-depth later) */
+    border-radius: 3px;
+    border-bottom: 2px solid var(--buttonborder); /* gives the button a bottom border with a width of 2px, a type of solid, and a color in RGBA format */
+    -webkit-transition: opacity 0.2s;
+    -o-transition: opacity 0.2s;
+    transition: opacity 0.2s;
     }
   
   button:hover, button:focus,
@@ -129,8 +141,11 @@ Link Active (Red): #f44336;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    width: 100%;
-    padding: 20px;
+    width: auto;
+    padding: 0;
+    border-bottom-style: solid;
+    border-bottom-width: 2px;
+    border-bottom-color: black;
   }
   
   .page-header_item {
@@ -157,15 +172,22 @@ Link Active (Red): #f44336;
   
   .page-header_item {
     float: left;
-    height: 100px;
-    width: 100px;
-    margin: 0 20px;
+    height: 80px;
+    width: 80px;
+    margin: 0 auto;
     }
   
     /*About Me page formatting*/
   .about-me {
     max-width:700px;
     margin:0 auto;
+    text-align: center;
+  }
+
+  .experience-table {
+    max-width:700px;
+    margin:0 auto;
+    text-align: center;  
   }
   
    /*Work Page Layout*/
@@ -270,6 +292,25 @@ Link Active (Red): #f44336;
     -webkit-animation: 34s cloud-move-reverse infinite alternate linear;
             animation: 34s cloud-move-reverse infinite alternate linear;
   } /* End Lesson Code*/
+
+/*Contact Page Formatting*/
+.center-profile {
+  max-width:500px;
+  margin:0 auto;
+  text-align: center;
+}
+
+.contact-form {
+  max-width:500px;
+  margin:0 auto;
+  text-align: center;
+}
+
+.contact-link {
+  max-width:500px;
+  margin:0 auto;
+  text-align: center; 
+}
   
   @media all and (max-width: 500px) {
     .grid {

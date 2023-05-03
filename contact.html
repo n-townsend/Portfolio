@@ -3,8 +3,11 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Contact Nicholas Townsend</title>
-    <link rel="shortcut icon" href="img/alligator_icon.svg" type="image/x-icon" />
+    <title>Contact Nicholas</title>
+    <link rel="shortcut icon" href="img/logo_icon.svg" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/style.production.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
@@ -30,34 +33,36 @@
                     </li>
                 </ul>
             </nav>
-        </header>
-    <div>
-        <h1>Contact</h1><br>
-        Nicholas Townsend<br>
-        1400 Johnson Road<br>
-        Auburndale, Florida<br>
-        33837<br>
-        <br>
-        Tel <a aria-label="Phone Number" href="tel:+1 336 953 6450">+1 336 953 6450</a></label><br>
-        Skype <a href="skype:live:nicholasstownsend">Nicholas Townsend</a><br>
-        <a href="mailto:nicholasstownsend@gmail.com">nicholasstownsend@gmail.com</a>
+    </header> 
+    <div class="center-profile">
+        <div>
+            <h1>Contact Nicholas</h1><br>
+            Nicholas Townsend<br>
+            1400 Johnson Road<br>
+            Auburndale, Florida<br>
+            33837<br>
+            <br>
+            Tel <a aria-label="Phone Number" href="tel:+1 336 953 6450">+1 336 953 6450</a><br>
+            Skype <a href="skype:live:nicholasstownsend">Nicholas Townsend</a><br>
+            <a href="mailto:nicholasstownsend@gmail.com">nicholasstownsend@gmail.com</a>
+        </div>
     </div>
-    <div> <!-- This will be my Form -->
+    <div class="contact-form"> <!-- This will be my Form -->
         <form action="" method="post" id="contact-form">
-            <label class="standard-label" for="contact-email">E-mail: </label>
-            <input type="email" id="contact-email" required>
-            
-            <label class="standard-label" for="contact-telephone">Telephone: </label>
-            <input type="tel" id="contact-telephone" pattern="\d{3}[\-]\d{3}[\-]\d{4}">
-            
-            <label class="standard-label" for="contact-message">Message: </label>
-            <textarea maxlength="240" id="contact-message" required></textarea>
-            
-            <input type="Submit" Value="Send Message">
+            <label class="standard-label" for="contact-email">E-mail: </label><br>
+            <input type="email" id="contact-email" required><br>
+
+            <label class="standard-label" for="contact-telephone">Telephone: </label><br>
+            <input type="tel" id="contact-telephone" pattern="\d{3}[\-]\d{3}[\-]\d{4}"><br>
+
+            <label class="standard-label" for="contact-message">Message: </label><br>
+            <textarea maxlength="240" id="contact-message" required></textarea><br>
+
+            <input type="Submit" value="Send Message">
         </form>
     </div>
     <br>
-    <div>
+    <div class="contact-link">
         <a href="mailto:nicholasstownsend@gmail.com">Contact Me</a>
     </div>    
 
